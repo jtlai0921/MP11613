@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>機種別性能比較表</title>
+<meta name="viewport" content="width=device-width">
+<link href="./css/common.css" rel="stylesheet" type="text/css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="js/speclist.js"></script>
+<script>
+$(function (){
+	Spec.init("spec_list");
+})
+</script>
+</head>
+
+<body>
+
+<div id="spec_list">
+	<div id="spec_mobile">
+		<h1>以功能選擇你的智慧型手機</h1>
+		<p>以在意的項目排序</p>
+		<select class="item">
+			<option value="size">依照體積尺寸選擇</option>
+			<option value="weight">依照重量選擇</option>
+			<option value="displaySize">依照螢幕尺寸選擇</option>
+			<option value="camera">依照相機像素選擇</option>
+		</select>
+		<div class="mobile_sort_list">
+			<ul></ul>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>利用Google Maps從目前所在位置導航至tuqulore公司</title>
+</head>
+<body>
+
+	<a href="http://maps.google.com/maps?daddr=35.6881985,139.7136668" id="to_googlemap">利用Google Maps從目前所在位置導航至tuqulore公司</a>
+	<!-- <a href="comgooglemaps://?daddr=35.6881985,139.7136668">利用Google Maps導航</a><br>
+	<a href="http://maps.google.com/maps?daddr=35.6881985,139.7136668">利用Google Maps導航</a> -->
+
+	<script>
+		var ua = navigator.userAgent.toLowerCase();
+		if(ua.indexOf("iphone") != -1 || a.indexOf("ipad") != -1) { // 若以iPhone或iPad瀏覽
+			var maplink = document.getElementById("to_googlemap"); // 取得a元素
+			maplink.href = maplink.href.replace("http://maps.google.com/maps", "comgooglemaps://"); // 置換a元素的href屬性的部分字串
+		}
+	</script>
+</body>
+</html>

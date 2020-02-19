@@ -1,0 +1,135 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	font-size: 100%;
+}
+
+ul, li, dl, dt, dd, h1, p, div {
+	margin: 0;
+	padding: 0;
+}
+
+#spec_list table {
+	border-collapse: collapse;
+}
+
+#spec_list th {
+	text-align: center;
+	border: 1px solid #999;
+	padding: 5px 10px;
+}
+
+#spec_list th img {
+	width: 40px;
+}
+
+#spec_list th span {
+	display: block;
+}
+
+#spec_list td {
+	padding: 5px 10px;
+	border: 1px solid #999;
+}
+
+#spec_mobile {
+	display: none;
+}
+
+@media(max-width:767px){
+	#spec_mobile {
+		display: block;
+	}
+	
+	#spec_mobile > h1 {
+		font-size: 100%;
+	}
+	
+	.mobile_sort_list ul {
+		margin-top: 1em;
+		border-top: 1px solid #999;
+	}
+	
+	.mobile_sort_list li {
+		border-bottom: 1px solid #999;
+		list-style: none;
+	}
+	
+	.mobile_sort_list li h1 {
+		font-size: 100%;
+	}
+	
+	.mobile_sort_list li dl::after {
+		content: "";
+		display: block;
+		clear: both;
+		height: 0;
+	}
+	.mobile_sort_list li dt {
+		float: left;
+		width: 25%;
+		line-height: 1;
+		text-align: center;
+		margin-top: .8em;
+	}
+	
+	.mobile_sort_list li dt img {
+		width: 35%;
+	}
+	
+	.mobile_sort_list li.lank1 {
+		background: #ffe8d1;
+	}
+	
+	.mobile_sort_list li.lank2 {
+		background: #fffdef;
+	}
+	
+	.mobile_sort_list li.lank3 {
+		background: #fffef6;
+	}
+	
+	.mobile_sort_list li.lank1 dt img {
+		width: 50%;
+	}
+	
+	.mobile_sort_list li.lank2 dt img {
+		width: 45%;
+	}
+	
+	.mobile_sort_list li.lank3 dt img {
+		width: 40%;
+	}
+	
+	.mobile_sort_list li dd {
+		padding: .5em 0 .5em 0;
+		width: 75%;
+		float: right;
+		background: url(http://grad3.ecoloniq.jp/sample/img/icons_05.png) no-repeat right center;
+	}
+	
+	.mobile_sort_list li dd a {
+		display: block;
+		width: 100%;
+		text-decoration: none;
+		color: black;
+	}
+	
+	.mobile_sort_list li dd a .etc {
+		padding-right: 1em;
+	}
+	
+	.mobile_sort_list li dd a .etc span {
+		font-size: 80%;
+		color: #333;
+		padding-right: .5em;
+		display: inline-block;
+		float: left;
+	}
+	
+	.mobile_sort_list li dd a .etc span::before {
+		content: "●";
+	}
+	
+}

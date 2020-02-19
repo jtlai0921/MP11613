@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>齒輪功能介紹</title>
+
+<script src="http://code.createjs.com/easeljs-0.7.0.min.js"></script>
+<script src="http://code.createjs.com/tweenjs-0.5.0.min.js"></script>
+<script src="http://code.createjs.com/movieclip-0.7.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<style>
+	canvas {
+		width: 100%;
+		border: 1px solid #666;
+	}
+	figure {
+		margin: 0;
+		text-align: center;
+	}
+</style>
+<script src="sbc_flash_canvas.js"></script>
+
+<script>
+var canvas, stage, exportRoot;
+
+function init() {
+	canvas = document.getElementById("canvas");
+	exportRoot = new lib.sbc_flash_canvas();
+
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.update();
+	createjs.Touch.enable(stage); // 支援智慧型手機觸控的設定
+
+	createjs.Ticker.setFPS(lib.properties.fps);
+	createjs.Ticker.addEventListener("tick", stage);
+}
+</script>
+</head>
+
+<body onload="init();" style="background-color:#D4D4D4">
+	<figure>
+		<canvas id="canvas" width="550" height="400" style="background-color:#FFFFFF"></canvas>
+		<figcaption>齒輪數20個與10個的旋轉次數</figcaption>
+	</figure>
+	
+</body>
+</html>
